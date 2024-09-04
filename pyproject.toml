@@ -1,32 +1,17 @@
-[build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
-
-[project]
-name = "amla_ass1"
-version = "0.0.1"
-description = "This project is aimed at building a model to predict which college basketball wplayer will be drafted to join the NBA league based on his statistics for the current season for an internal UTS Kaggle competition."
-authors = [
-  { name = "Aman S. Dalal" },
-]
-
+[tool.poetry]
+name = "amla-ass1"
+version = "0.1.0"
+description = "This project is aimed at building a model to predict which college basketball player will be drafted to join the NBA league based on his statistics for the current season for an internal UTS Kaggle competition."
+authors = ["Aman S. Dalal"]
 readme = "README.md"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    
-]
-requires-python = "~=3.11.4"
 
-[tool.black]
-line-length = 99
-include = '\.pyi?$'
-exclude = '''
-/(
-    \.git
-  | \.venv
-)/
-'''
+[tool.poetry.dependencies]
+python = "3.11.4"
+pandas = "2.2.2"
+jupyterlab = "4.2.3"
+scikit-learn = "1.5.1"
 
-[tool.ruff.lint.isort]
-known_first_party = ["amla_ass1"]
-force_sort_within_sections = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
